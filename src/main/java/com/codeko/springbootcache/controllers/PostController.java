@@ -53,6 +53,7 @@ public class PostController {
     @Cacheable(value = "post-top")
     @GetMapping("/top")
     public List<Post> getTopPosts() {
+        log.info("get list posts from db");
         return postService.getTopPosts();
     }
 
